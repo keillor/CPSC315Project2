@@ -7,7 +7,17 @@ int currentIndex = 1;
 int arrayLength;
 
 void *alpha(char* myStr[]) {
-    printf("alpha: %s\n", myStr[currentIndex]);
+    int iterationIndex = currentIndex;
+    if(myStr[currentIndex][0] > 47 && myStr[currentIndex][0] < 58) {
+        printf("alpha: %s\n", myStr[currentIndex]);
+        currentIndex++;
+        if(currentIndex >= arrayLength) {
+            return NULL;
+        }
+    }
+    /*while (iterationIndex == currentIndex) {
+        continue;
+    }*/
     return NULL;
 }
 
